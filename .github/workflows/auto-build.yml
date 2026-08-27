@@ -1,0 +1,43 @@
+name: 🤖 Auto Build — Otomatis Saat Ada File Baru
+
+# 🔄 OTOMATIS BERJALAN SETIAP ADA PUSH / PULL REQUEST
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  # Bisa juga dijalankan manual dari Actions tab
+  workflow_dispatch:
+
+jobs:
+  build-apk:
+    name: 🔨 Build Debug APK Otomatis
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout Kode
+        uses: actions/checkout@v4
+
+      - name: ☕ Setup Java 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: 🛠️ Beri izin Gradle Wrapper
+        run: chmod +x gradlew
+
+      - name: 🚀 Build Debug APK
+        run: ./gradlew assembleDebug --no-build-cache
+
+      - name: ✅ Cek Hasil Build
+        run: ls -la app/build/outputs/apk/debug/
+
+      - name: 📤 Upload APK ke Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: MTDstudio-APK-Otomatis
+          path: app/build/outputs/apk/debug/app-debug.apk
+          retention-days: 30
+
+      - name: ✅ Selesai
+        run: echo "✅ Build Berhasil! APK sudah tersedia di Artifacts!"
