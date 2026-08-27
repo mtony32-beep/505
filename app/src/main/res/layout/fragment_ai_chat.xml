@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="16dp" android:background="#F5F5F5">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="🤖 AI Gemini 1.5 Flash" android:textSize="24sp" android:textStyle="bold"
+        android:textColor="#6200EE" android:paddingBottom="16dp"/>
+    <Spinner android:id="@+id/spinner_file" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="Pilih file aktif..."/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_marginVertical="8dp">
+        <EditText android:id="@+id/et_message" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:hint="Ketik pesan atau tanya kode..." android:minLines="2"
+            android:padding="12dp" android:background="#FFFFFF"/>
+        <Button android:id="@+id/btn_mic" android:layout_width="50dp"
+            android:layout_height="50dp" android:text="🎤"
+            android:backgroundTint="#FF9800" android:layout_marginStart="8dp"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gap="8dp">
+        <Button android:id="@+id/btn_send" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="📤 KIRIM" android:backgroundTint="#6200EE" android:textColor="#FFFFFF"/>
+        <Button android:id="@+id/btn_fix_file" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="🔧 PERBAIKI FILE" android:backgroundTint="#4CAF50" android:textColor="#FFFFFF"/>
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:layout_marginTop="16dp">
+        <TextView android:id="@+id/tv_response" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:padding="16dp"
+            android:background="#FFFFFF" android:text="Hasil AI akan muncul di sini..."/>
+    </ScrollView>
+</LinearLayout>
