@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_ai" android:icon="@drawable/ic_ai" android:title="AI Chat"/>
+    <item android:id="@+id/nav_editor" android:icon="@drawable/ic_code" android:title="Editor"/>
+    <item android:id="@+id/nav_github" android:icon="@drawable/ic_github" android:title="GitHub"/>
+    <item android:id="@+id/nav_terminal" android:icon="@drawable/ic_terminal" android:title="Terminal"/>
+    <item android:id="@+id/nav_build" android:icon="@drawable/ic_build" android:title="Build"/>
+    <item android:id="@+id/nav_db" android:icon="@drawable/ic_database" android:title="DB Viewer"/>
+    <item android:id="@+id/nav_api" android:icon="@drawable/ic_api" android:title="API Tester"/>
+</menu>
