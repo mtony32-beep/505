@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#1E1E1E">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:padding="8dp" android:background="#2D2D2D">
+        <EditText android:id="@+id/et_filename" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:hint="Nama file.kt" android:textColor="#FFFFFF"
+            android:background="#3C3F41" android:padding="8dp" android:textSize="14sp"/>
+        <Button android:id="@+id/btn_save" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="💾 Simpan"
+            android:backgroundTint="#4CAF50" android:textColor="#FFFFFF" android:layout_marginStart="4dp"/>
+        <Button android:id="@+id/btn_upload" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="📤"
+            android:backgroundTint="#FF9800" android:layout_marginStart="4dp"/>
+        <Button android:id="@+id/btn_download" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="📥"
+            android:backgroundTint="#2196F3" android:layout_marginStart="4dp"/>
+    </LinearLayout>
+    <FrameLayout android:id="@+id/editor_container" android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:padding="4dp" android:background="#2D2D2D">
+        <Button android:id="@+id/btn_undo" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="↩️ Undo" android:textSize="12sp" android:backgroundTint="#3C3F41"/>
+        <Button android:id="@+id/btn_redo" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="↪️ Redo" android:textSize="12sp" android:backgroundTint="#3C3F41"/>
+        <Button android:id="@+id/btn_find" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="🔍 Cari" android:textSize="12sp" android:backgroundTint="#3C3F41"/>
+        <Button android:id="@+id/btn_test" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="🧪 Test" android:textSize="12sp" android:backgroundTint="#3C3F41"/>
+    </LinearLayout>
+</LinearLayout>
