@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#000000" android:padding="8dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="💻 Terminal" android:textSize="20sp" android:textStyle="bold"
+        android:textColor="#00FF00" android:padding="8dp"/>
+    <TextView android:id="@+id/tv_output" android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1" android:padding="8dp"
+        android:textColor="#00FF00" android:typeface="monospace" android:text="~ $ cd ~/505\n~ $ git status\nOn branch main\n~ $"/>
+    <EditText android:id="@+id/et_cmd" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="Ketik perintah..."
+        android:textColor="#FFFFFF" android:hintTextColor="#888888" android:background="#333333"
+        android:padding="12dp" android:layout_marginTop="8dp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_marginTop="8dp" android:gap="4dp">
+        <Button android:id="@+id/btn_run" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="▶ JALANKAN" android:backgroundTint="#00C853"/>
+        <Button android:id="@+id/btn_git_push" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="📤 GIT PUSH" android:backgroundTint="#FF9800"/>
+        <Button android:id="@+id/btn_git_pull" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="📥 GIT PULL" android:backgroundTint="#2196F3"/>
+    </LinearLayout>
+</LinearLayout>

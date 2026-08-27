@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="16dp" android:background="#F5F5F5">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="🐙 GitHub Sync" android:textSize="24sp" android:textStyle="bold"
+        android:textColor="#6200EE" android:paddingBottom="16dp"/>
+    <EditText android:id="@+id/et_repo" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="Repo: username/repo"
+        android:padding="12dp" android:background="#FFFFFF" android:text="mtony32-beep/505"/>
+    <EditText android:id="@+id/et_token" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="GitHub Token..."
+        android:padding="12dp" android:background="#FFFFFF" android:inputType="textPassword"
+        android:layout_marginTop="8dp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_marginTop="16dp" android:gap="8dp">
+        <Button android:id="@+id/btn_clone" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="📂 Clone" android:backgroundTint="#2196F3"/>
+        <Button android:id="@+id/btn_pull" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="📥 Pull" android:backgroundTint="#4CAF50"/>
+        <Button android:id="@+id/btn_push" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="📤 Push" android:backgroundTint="#FF9800"/>
+    </LinearLayout>
+    <TextView android:id="@+id/tv_log" android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:padding="12dp" android:background="#FFFFFF"
+        android:layout_marginTop="16dp" android:text="Log aktivitas akan muncul di sini...\n\n• Clone → Ambil repo\n• Pull → Update terbaru\n• Push → Kirim perubahan"/>
+</LinearLayout>
